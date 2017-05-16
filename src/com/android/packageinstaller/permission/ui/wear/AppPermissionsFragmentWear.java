@@ -207,7 +207,7 @@ public final class AppPermissionsFragmentWear extends PreferenceFragment {
             if((Boolean) newVal) {
                 group.grantRuntimePermissions(false, new String[]{ perm.name });
             } else {
-                group.revokeRuntimePermissions(false, new String[]{ perm.name });
+                group.revokeRuntimePermissions(true, new String[]{ perm.name });
             }
 
             if (Utils.areGroupPermissionsIndividuallyControlled(getContext(), group.getName())
